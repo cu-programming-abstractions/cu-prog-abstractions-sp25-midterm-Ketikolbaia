@@ -20,6 +20,10 @@ public:
     bool isWall(int r, int c) const;
     void printWithPath(ostream& out) const;
 
+    int numRows() const { return grid.size(); }
+    int numCols() const { return grid.empty() ? 0 : grid[0].size(); }
+
+
     vector<string> grid;
     Cell start { -1, -1 };
     Cell finish { -1, -1 };
